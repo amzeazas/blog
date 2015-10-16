@@ -1,0 +1,11 @@
+<div class="container-fluid">
+  <div class="jumbotron">
+    <h1>Nerdy Ramblings <small>Your portal into the world of nerd happenings</small></h1>
+  </div>
+</div>
+
+<ul>
+  <% @posts.each do |post| %>
+    <li><%= link_to list.name, list_path %></li>
+  <% end %>
+</ul>
