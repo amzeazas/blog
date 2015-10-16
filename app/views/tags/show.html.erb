@@ -1,13 +1,6 @@
 <div class="panel panel-success">
   <div class="panel-heading">
     <h1 class="text-center">Posts with the <b><u><%= @tag.name %></u></b> tag</h1>
-  </div>
-  <ul class="list-group">
-    <% @tag.posts.order(created_at: :desc).each do |post| %>
-    <li class="list-group-item"><h4><%= link_to post.title, post_path(post) %></h4></li>
-    <% end %>
-  </ul>
-  <div class="panel-footer">
     <p class="text-right">
       <%= link_to "Edit Tag", edit_tag_path(@tag) %> |
       <%= link_to "Delete Tag", tag_path(@tag),
@@ -15,6 +8,11 @@
                                           :method => "delete"} %>
     </p>
   </div>
+  <ul class="list-group">
+    <% @tag.posts.order(created_at: :desc).each do |post| %>
+    <li class="list-group-item"><h4><%= link_to post.title, post_path(post) %></h4></li>
+    <% end %>
+  </ul>
 </div>
 
 <%= link_to "Back", :back %>
