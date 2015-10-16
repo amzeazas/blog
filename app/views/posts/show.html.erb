@@ -10,6 +10,9 @@
       <%= link_to tag.name, tag_path(tag) %>
     <% end %>
   </div>
+  <div class="panel-footer">
+    <p class="text-right"><%= link_to "Edit Post", edit_post_path(@post) %></p>
+  </div>
 </div>
 
 <%= link_to "Back", :back %>
