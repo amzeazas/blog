@@ -1,0 +1,15 @@
+<div class="panel panel-info">
+  <div class="panel-heading">
+    <h1 class="text-center"><%= @post.title %> <small>Posted on <%= @post.created_at %></small></h1>
+  </div>
+  <div class="panel-body">
+    <h4><%= @post.body %></h4>
+  </div>
+  <div class="panel-footer">
+    <% @post.tags.order(name:).each do |tag| %>
+      <%= link_to tag.name, tag_path(tag) %>
+    <% end %>
+  </div>
+</div>
+
+<%= link_to "Back", :back %>
