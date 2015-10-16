@@ -14,3 +14,16 @@
     <% end %>
   </ul>
 </div>
+
+<div class="panel panel-success">
+  <div class="panel-heading">
+    <h1 class="text-center">Tags</h1>
+  </div>
+  <div class="panel-body">
+    <h4>
+      <% @tags.order(name: :asc).each do |tag| %>
+        <%= link_to tag.name, tag_path(tag) %>
+      <% end %>
+    </h4>
+  </div>
+</div>

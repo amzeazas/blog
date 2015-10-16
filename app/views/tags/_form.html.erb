@@ -1,0 +1,11 @@
+<%= render "layouts/errors", :object => @tag %>
+
+<%= form_for @tag do |f| %>
+  <div class="form-group">
+    <%= f.label :name %>
+    <%= f.text_field :name, class: "form-control" %>
+  </div>
+  <%= f.submit "Save", class: "btn btn-success" %>
+<% end %>
+
+<%= link_to "Back", :back %>
