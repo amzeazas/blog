@@ -1,11 +1,16 @@
 <div class="container-fluid">
   <div class="jumbotron">
-    <h1>Nerdy Ramblings <small>Your portal into the world of nerd happenings</small></h1>
+    <h1>Nerdy Ramblings <small>Your portal into the happenings in the Nerd World</small></h1>
   </div>
 </div>
 
-<ul>
-  <% @posts.each do |post| %>
-    <li><%= link_to list.name, list_path %></li>
-  <% end %>
-</ul>
+<div class="panel panel-info">
+  <div class="panel-heading">
+    <h1 class="text-center">Posts</h1>
+  </div>
+  <ul class="list-group">
+    <% @posts.order(created_at: :desc).each do |post| %>
+    <li class="list-group-item"><%= link_to post.title, post_path(post) %></li>
+    <% end %>
+  </ul>
+</div>
