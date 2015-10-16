@@ -1,0 +1,16 @@
+<%= form_for @post do |f| %>
+  <div class="form-group">
+    <%= f.label :title %>
+    <%= f.text_field :title, class: "form-control" %>
+  </div>
+  <div class="form-group">
+    <%= f.label :body, "Post" %>
+    <%= f.text_area :body, class: "form-control" %>
+  </div>
+  <div class="form-group">
+    <%= f.label :tag, "Tags" %>
+    <%= f.select :tag_ids, Tag.all.collect {|t| [t.name, t.id]}, {}, :multiple => true, class: "form-control" %>
+  </div>
+
+  <%= f.submit "Add Post", class: "btn btn-info" %>
+<% end %>

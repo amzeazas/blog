@@ -10,7 +10,7 @@
   </div>
   <ul class="list-group">
     <% @posts.order(created_at: :desc).each do |post| %>
-    <li class="list-group-item"><%= link_to post.title, post_path(post) %></li>
+    <li class="list-group-item"><h4><%= link_to post.title, post_path(post) %></h4></li>
     <% end %>
   </ul>
 </div>
