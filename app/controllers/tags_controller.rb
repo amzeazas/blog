@@ -23,6 +23,15 @@ class TagsController < ApplicationController
     render :edit
   end
 
+  def update
+    @tag= Tag.find(params[:id])
+    if @tag.update(tag_params)
+      redirect_to posts_path
+    else
+      render :edit
+    end
+  end
+
   def destroy
     @tag = Tag.find(params[:id])
     @tag.destroy
