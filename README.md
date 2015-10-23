@@ -1,27 +1,20 @@
 #Blog
 
-####Version 1.0, 16 October 2015
+####Version 1.1, 23 October 2015
 By Alexa Zeazas
 
 ###Description
-This app allows users to create, edit, and delete blog posts, as well as tags for each post.
+This blog app allows the admin to create, edit, and delete posts and tags. Users can view these posts and can sign-up to comment on posts.
 
 _Goals for future updates_
-* _Add authentication so users can create profiles._
-* _Mass deployment._
+* _TBD_
 
 ###Setup
-1. Clone the repo by typing `git clone https://github.com/amzeazas/blog.git` into the terminal.
-2. To bundle the gems, type `bundle` into the terminal.
-3. To launch Postgres, type `postgres` into the terminal.
-4. To create the database, type `rake db:create` into the terminal.
-5. To create the tables in the database, type `rake db:migrate` into the terminal.
-6. To create the test database, type `rake db:test:prepare` into the terminal.
-7. Launch server by typing `rails s` into the terminal and going to `localhost:3000` in your browser.
-8. You can now begin creating your blog posts!
+1. Visit http://radiant-beach-2644.herokuapp.com/.
+2. You can now view the blog posts! Don't forget to sign-up if you want to leave comments!
 
 ###Technologies Used
-This app was built using Ruby/Rails, Postgres, and ActiveRecord. Test tools and framework used were RSpec and Capybara.
+This app was built using Ruby/Rails, Postgres, and ActiveRecord. Test tools and framework used were RSpec, Capybara, and SimpleCov.
 
 ###Legal
 
