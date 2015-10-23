@@ -31,7 +31,7 @@
     <% @comments.each do |comment| %>
       <li class="list-group-item">
         <h5><%= comment.text %></h5>
-        <p class="text-right">From <%= comment.user.email %> <small>posted on <%= comment.created_at.strftime("%d %b. %Y") %></small></p>
+        <p class="text-right">From <b><%= comment.user.username %></b> <small>posted on <%= comment.created_at.strftime("%d %b. %Y") %></small></p>
         <% if comment.user == current_user %>
           <p class="text-right">
             <%= link_to "Edit Comment", edit_post_comment_path(@post, comment) %> |
