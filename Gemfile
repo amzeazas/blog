@@ -18,11 +18,13 @@ end
 
 group :test, :development do
   gem 'rspec-rails'
-  gem 'launchy'
   gem 'pry'
-  gem 'capybara'
 end
 
 group :test do
   gem 'shoulda-matchers'
+  gem 'capybara'
+  gem 'launchy'
+  gem 'factory_girl_rails'
+  gem 'simplecov', require: false
 end
