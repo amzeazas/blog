@@ -7,12 +7,15 @@
       <% if user_signed_in? == false %>
         <li><%= link_to "Sign Up", new_user_registration_path %></li>
         <li><%= link_to "Sign In", new_user_session_path %></li>
+      <% elsif current_user.admin? %>
+        <li><%= link_to "Add a New Tag", new_tag_path %></li>
+        <li><%= link_to "Add a New Post", new_post_path %></li>
+        <li><%= link_to "Edit Profile", edit_user_registration_path %></li>
+        <li><%= link_to "Sign Out, #{current_user.username}", destroy_user_session_path, :method => 'delete' %></li>
       <% else %>
         <li><%= link_to "Edit Profile", edit_user_registration_path %></li>
         <li><%= link_to "Sign Out, #{current_user.username}", destroy_user_session_path, :method => 'delete' %></li>
       <% end %>
-        <!-- <li><a href="/posts/new">Add a New Post</a></li>
-        <li><a href="/tags/new">Add a New Tag</a></li> -->
     </ul>
   </div>
 </nav>
