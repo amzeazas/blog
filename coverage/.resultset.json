@@ -329,7 +329,14 @@
         null,
         null
       ],
+      "/Users/amzeazas/Documents/Epicodus/Code_Reviews/Week_11/blog/app/models/comment.rb": [
+        1,
+        1,
+        1,
+        null
+      ],
       "/Users/amzeazas/Documents/Epicodus/Code_Reviews/Week_11/blog/app/models/post.rb": [
+        1,
         1,
         1,
         1,
@@ -441,6 +448,14 @@
         null,
         null
       ],
+      "/Users/amzeazas/Documents/Epicodus/Code_Reviews/Week_11/blog/spec/models/comment_spec.rb": [
+        1,
+        null,
+        1,
+        2,
+        2,
+        null
+      ],
       "/Users/amzeazas/Documents/Epicodus/Code_Reviews/Week_11/blog/spec/models/post_spec.rb": [
         1,
         null,
@@ -459,6 +474,6 @@
         null
       ]
     },
-    "timestamp": 1445567555
+    "timestamp": 1445568177
   }
 }
