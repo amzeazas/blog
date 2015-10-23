@@ -4,8 +4,12 @@
       <a class="navbar-brand" href="/">Nerdy Ramblings</a>
     </div>
     <ul class="nav navbar-nav pull-right">
-      <li><a href="/posts/new">Add a New Post</a></li>
-      <li><a href="/tags/new">Add a New Tag</a></li>
+      <% if user_signed_in? == false %>
+        <li><%= link_to "Sign Up", new_user_registration_path %></li>
+        <li><%= link_to "Sign In", new_user_session_path %></li>
+      <% end %>
+        <!-- <li><a href="/posts/new">Add a New Post</a></li>
+        <li><a href="/tags/new">Add a New Tag</a></li> -->
     </ul>
   </div>
 </nav>
