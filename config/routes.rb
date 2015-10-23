@@ -3,6 +3,7 @@ Rails.application.routes.draw do
 
   resources :posts do
     resources :tags, :only => [:show]
+    resources :comments, :except => [:index, :show]
   end
 
   resources :tags do
