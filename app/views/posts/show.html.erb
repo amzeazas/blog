@@ -16,7 +16,7 @@
       TAGS FOR THIS POST:
     </p>
     <p>
-      <% @post.tags.order(name: :asc).each do |tag| %>
+      <% @tags.each do |tag| %>
         <%= link_to tag.name, tag_path(tag) %>
       <% end %>
     </p>
@@ -28,7 +28,7 @@
     <h4 class="text-center">COMMENTS:</h4>
   </div>
   <ul class="list-group">
-    <% @comments.order(created_at: :asc).each do |comment| %>
+    <% @comments.each do |comment| %>
       <li class="list-group-item">
         <h5><%= comment.text %></h5>
         <p class="text-right">From <small>posted on <%= comment.created_at.strftime("%d %b. %Y") %></small></p>

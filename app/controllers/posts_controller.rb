@@ -1,13 +1,14 @@
 class PostsController < ApplicationController
   def index
-    @posts = Post.all
-    @tags = Tag.all
+    @posts = Post.all.order(created_at: :desc)
+    @tags = Tag.all.order(name: :asc)
     render :index
   end
 
   def show
     @post = Post.find(params[:id])
-    @comments = @post.comments
+    @tags = @post.tags.order(name: :asc)
+    @comments = @post.comments.order(created_at: :asc)
     render :show
   end
 

@@ -18,7 +18,7 @@
     <h1 class="text-center">Posts</h1>
   </div>
   <ul class="list-group">
-    <% @posts.order(created_at: :desc).each do |post| %>
+    <% @posts.each do |post| %>
     <li class="list-group-item"><h4><%= link_to post.title, post_path(post) %></h4></li>
     <% end %>
   </ul>
@@ -30,7 +30,7 @@
   </div>
   <div class="panel-body">
     <h4>
-      <% @tags.order(name: :asc).each do |tag| %>
+      <% @tags.each do |tag| %>
         <%= link_to tag.name, tag_path(tag) %>
       <% end %>
     </h4>
