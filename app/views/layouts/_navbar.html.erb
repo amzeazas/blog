@@ -7,6 +7,9 @@
       <% if user_signed_in? == false %>
         <li><%= link_to "Sign Up", new_user_registration_path %></li>
         <li><%= link_to "Sign In", new_user_session_path %></li>
+      <% else %>
+        <li><%= link_to "Edit Profile", edit_user_registration_path %></li>
+        <li><%= link_to "Sign Out", destroy_user_session_path, :method => 'delete' %></li>
       <% end %>
         <!-- <li><a href="/posts/new">Add a New Post</a></li>
         <li><a href="/tags/new">Add a New Tag</a></li> -->
