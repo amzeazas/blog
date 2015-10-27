@@ -7,16 +7,48 @@ By Alexa Zeazas
 This blog app allows the admin to create, edit, and delete posts and tags. Users can view these posts and can sign-up to comment on posts.
 
 _Goals for future updates_
-* _TBD_
+* _Add AJAX to create new tag in new/edit post form._
+* _Add AJAX to create new comment on post page._
 
-###Setup
-1. Visit http://radiant-beach-2644.herokuapp.com/.
-2. You can now view the blog posts! Don't forget to sign-up if you want to leave comments!
+##Demo
+* Visit [http://radiant-beach-2644.herokuapp.com/](http://radiant-beach-2644.herokuapp.com/) for a demo.
 
-###Technologies Used
-This app was built using Ruby/Rails, Postgres, and ActiveRecord. Test tools and framework used were RSpec, Capybara, and SimpleCov.
+##Setup
 
-###Legal
+###Installation
+1. `git clone <repository-url>` this repository
+2. `cd` into the new directory
+3. `bundle install`
+4. `postgres`
+5. `rake db:create`
+6. `rake db:migrate`
+
+###Running / Development
+1. `rake db:test:prepare` to create test database
+2. `rails server`
+3. Visit your app at [http://localhost:3000](http://localhost:3000).
+
+##Technologies Used
+
+Programming Language
+* Ruby
+* Javascript
+* HTML/CSS
+
+Web Application Library
+* Ruby on Rails
+* jquery
+* AJAX
+* ActiveRecord
+
+Test Tools
+* RSpec
+* Capybara
+* SimpleCov
+* PhantomJS
+* Poltergeist
+
+##Legal
 
 Copyright (c) 2015 Alexa Zeazas
 
