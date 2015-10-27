@@ -8,7 +8,6 @@ This blog app allows the admin to create, edit, and delete posts and tags. Users
 
 _Goals for future updates_
 * _Add AJAX to create new tag in new/edit post form._
-* _Add AJAX to create new comment on post page._
 
 ##Demo
 * Visit [http://radiant-beach-2644.herokuapp.com/](http://radiant-beach-2644.herokuapp.com/) for a demo.

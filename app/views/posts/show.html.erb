@@ -29,7 +29,7 @@
   <div class="panel-heading">
     <h4 class="text-center">COMMENTS:</h4>
   </div>
-  <ul class="list-group">
+  <ul id="post_comments", class="list-group">
     <% @comments.each do |comment| %>
       <li class="list-group-item">
         <h5><%= comment.text %></h5>
@@ -55,7 +55,7 @@
 
 <% if user_signed_in? %>
   <div class="container-fluid">
-    <%= link_to "Add New Comment", new_post_comment_path(@post), class:"btn btn-default" %>
+    <%= link_to "Add New Comment", new_post_comment_path(@post), id:"new_comment_link", class:"btn btn-default", remote:true %>
   </div>
 <% end %>
 
