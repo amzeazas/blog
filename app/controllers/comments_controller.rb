@@ -12,7 +12,10 @@ class CommentsController < ApplicationController
     @user = current_user
     if @comment.save
       flash[:notice] = "Comment successfully created"
-      redirect_to post_path(@post)
+      respond_to do |format|
+        format.html { redirect_to post_path(@post) }
+        format.js
+      end
     else
       render :new
     end
@@ -30,7 +33,11 @@ class CommentsController < ApplicationController
     @post= Post.find(@comment.post.id)
     @user = current_user
     if @comment.update(comment_params)
-      redirect_to post_path(@post)
+      flash[:notice] = "Comment successfully updated."
+      respond_to do |format|
+        format.html { redirect_to post_path(@post) }
+        format.js
+      end
     else
       render :edit
     end
