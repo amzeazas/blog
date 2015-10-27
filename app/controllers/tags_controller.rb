@@ -14,8 +14,12 @@ class TagsController < ApplicationController
     @tag = Tag.new(tag_params)
     if @tag.save
       flash[:notice] = "Tag successfully created"
-      redirect_to posts_path
+      respond_to do |format|
+        format.html { redirect_to new_post_path }
+        format.js
+      end
     else
+      flash[:alert] = "Tag not created"
       render :new
     end
   end
